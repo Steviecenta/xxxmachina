@@ -2,6 +2,10 @@ import sys
 from pathlib import Path
 
 import joblib
+
+# Saving the trained pipeline and metadata
+joblib.dump(final_pipeline, "house_price_model_pipeline.pkl")
+joblib.dump(metadata, "house_price_app_metadata.pkl")
 import pandas as pd
 import streamlit as st
 
