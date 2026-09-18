@@ -30,6 +30,11 @@ def handle_ames_missing_values(df):
 # If joblib saved the function under the notebook's __main__ scope, this makes
 # it available under the same name during unpickling inside Streamlit.
 sys.modules["__main__"].handle_ames_missing_values = handle_ames_missing_values
+MODEL_PATH = "house_price_model_pipeline.pkl"
+METADATA_PATH = "house_price_app_metadata.pkl"
+
+model = joblib.load(MODEL_PATH)
+metadata = joblib.load(METADATA_PATH)
 
 
 # ==============================================================================
